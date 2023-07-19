@@ -5,9 +5,12 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Успешно")
+    return render(request, 'index.html')
 
 
-def test33(request):
-    return HttpResponse("Test33")
+def top_sellers(request):
+    return render(request, 'top-sellers.html')
 
+
+def new_ad(request):
+    return render(request, 'advertisement-post.html')
