@@ -5,9 +5,5 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Успешно")
-
-
-def test33(request):
-    return HttpResponse("Test33")
+    return render(request, 'index.html')
 
