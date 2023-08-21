@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,39 +10,39 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/fontello.css">
-  <title>Login</title>
+  <title>{% block title %}Login{% endblock %}</title>
 </head>
 
-<body>
 
 
+{% block content %}
   <ul class="nav nav-pills sticky-top bg-white nav-fill">
     <li class="nav-item">
-      <a class="nav-link" href="index.html">
+      <a class="nav-link" href="{% url '/' %}">
         <span style="font-weight: bold;">Главная</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="top-sellers.html"><span style="font-weight: bold;">Топ продавцов</span>
+      <a class="nav-link" href="{% url 'top' %}"><span style="font-weight: bold;">Топ продавцов</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="advertisement-post.html">
+      <a class="nav-link" href="{% url 'post' %}">
         <span style="font-weight: bold;">Разместить объявление</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="register.html">
+      <a class="nav-link" href="{% url 'reg' %}">
         <span style="font-weight: bold;">Регистрация</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="login.html">
+      <a class="nav-link active" aria-current="page" href="{% url 'log' %}">
         <span style="font-weight: bold;">Войти</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="profile.html">
+      <a class="nav-link" href="{% url 'us' %}">
         <span style="font-weight: bold;">Профиль</span>
       </a>
     </li>
@@ -82,6 +84,8 @@
       </div>
     </form>
   </div>
+{% endblock %}
+
   <script src="js/bootstrap.bundle.min.js"></script>
-</body>
+
 </html>

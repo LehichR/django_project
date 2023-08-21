@@ -14,3 +14,15 @@ def top_sellers(request):
 
 def new_ad(request):
     return render(request, 'advertisement-post.html')
+
+
+def register(request):
+    return render(request, 'register.html')
+
+
+def user(request):
+    return render(request, 'profile.html')
+
+
+def auth(request):
+    return render(request, 'login.html')
